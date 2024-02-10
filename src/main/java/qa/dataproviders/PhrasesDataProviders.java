@@ -1,27 +1,26 @@
 package qa.dataproviders;
 
 import org.testng.annotations.DataProvider;
-import qa.base.BaseDataProviders;
 import qa.dataprovidernames.DataProviderNames;
 import qa.testdataprovider.TestDataProvider;
 
-public class PhrasesDataProviders extends BaseDataProviders {
+public class PhrasesDataProviders {
 
     @DataProvider(name = DataProviderNames.CORRECT)
     public Object[] correct() {
 
-        return TestDataProvider.getStrings(getSource(), DataProviderNames.CORRECT);
+        return TestDataProvider.getStrings(DataProviderNames.CORRECT);
     }
 
     @DataProvider(name = DataProviderNames.INCORRECT)
     public Object[] incorrect() {
 
-        return TestDataProvider.getStrings(getSource(), DataProviderNames.INCORRECT);
+        return TestDataProvider.getStrings(DataProviderNames.INCORRECT);
     }
 
     @DataProvider(name = DataProviderNames.NAUGHTY_STRINGS)
     public Object[] naughtyStrings() {
 
-        return TestDataProvider.getStrings(getSource(), DataProviderNames.NAUGHTY_STRINGS);
+        return TestDataProvider.getStrings(DataProviderNames.NAUGHTY_STRINGS);
     }
 }

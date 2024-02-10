@@ -9,6 +9,7 @@ import qa.driver.Driver;
 import qa.interactions.Interactions;
 import qa.pageobject.menu.MainDropdownList;
 import qa.servermanager.ServerManager;
+import qa.testdataloader.TestDataLoader;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
@@ -39,7 +40,7 @@ public class BaseTest {
 
         if (!filename.equals("noFilename")){
 
-            BaseDataProviders.loadTestData(filename);
+            TestDataLoader.fetch(filename);
         }
     }
 

@@ -1,0 +1,210 @@
+{
+
+        "main": [
+
+            {
+                "value": "//li[@id='menu-item-24730']/a",
+                "url": "https://bazylika-pszow.pl/ogloszenia-duszpasterskie/"
+            },
+    
+            {
+                "value": "//li[@id='menu-item-24731']/a",
+                "url": "https://bazylika-pszow.pl/intencje-mszalne/"
+            },
+    
+            {
+                "value": "//li[@id='menu-item-24732']/a",
+                "url": "https://bazylika-pszow.pl/pogrzeby/"
+            },
+    
+            {
+                "value": "//li[@id=\"menu-item-24733\"]/a",
+                "url": "https://bazylika-pszow.pl/szafarze/"
+            },
+    
+            {
+                "value": "//li[@id='menu-item-24734']/a",
+                "url": "https://bazylika-pszow.pl/kaplani/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24736']/a",
+                "url": "https://bazylika-pszow.pl/spowiedz-w-bazylice/"
+            },
+    
+            {
+                "value": "//li[@id='menu-item-24702']/a",
+                "url": "https://bazylika-pszow.pl/kancelaria/"
+            }
+        ],
+
+        "aboutParish": [
+
+            {
+                "value": "//li[@id='menu-item-24703']/a",
+                "url": "https://bazylika-pszow.pl/kontakt/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-1318']/a",
+                "url": "https://bazylika-pszow.pl/historia-parafii/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-1297']/a",
+                "url": "https://bazylika-pszow.pl/kalwaria-pszowska/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24996']/a",
+                "url": "https://bazylika-pszow.pl/pielgrzymki/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24999']/a",
+                "url": "https://bazylika-pszow.pl/galeria-zdjec/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25000']/a",
+                "url": "https://bazylika-pszow.pl/galeria-filmow/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24997']/a",
+                "url": "https://www.youtube.com/watch?v=WGS7vbNKoN0"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24998']/a",
+                "url": "https://bazylika-pszow.pl/wsparcie-parafii/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25066']/a",
+                "url": "https://bazylika-pszow.pl/plan-koledy-2023-2024/"
+            }
+        ],
+
+        "sacraments": [
+
+            {
+                "value": "//li[@id='menu-item-24805']",
+                "url": "https://bazylika-pszow.pl/sakramenty/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25001']/a",
+                "url": "https://bazylika-pszow.pl/pierwsza-komunia/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24807']/a",
+                "url": "https://bazylika-pszow.pl/sakrament-bierzmowania/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-24804']/a",
+                "url": "https://bazylika-pszow.pl/sakrament-malzenstwa/"
+            }
+        ],
+
+        "priesthood": [
+
+            {
+                "value": "//li[@id='menu-item-17470']/a",
+                "url": "https://bazylika-pszow.pl/caritas-i-dzialalnosc-charytatywna/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25004']/a",
+                "url": "https://bazylika-pszow.pl/parafialna-rada-duszpasterska/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25005']/a",
+                "url": "https://bazylika-pszow.pl/ministranci/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25006']/a",
+                "url": "https://bazylika-pszow.pl/dzieci-maryi-2/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25007']/a",
+                "url": "https://bazylika-pszow.pl/oaza-mlodziezowa/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25008']/a",
+                "url": "https://bazylika-pszow.pl/ruch-domowy-kosciol/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25009']/a",
+                "url": "https://bazylika-pszow.pl/katecheza-doroslych/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25010']/a",
+                "url": "https://bazylika-pszow.pl/grupa-poco/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25011']/a",
+                "url": "https://bazylika-pszow.pl/legion-maryi/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25012']/a",
+                "url": "https://bazylika-pszow.pl/bractwo-zywego-rozanca/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-8090']/a",
+                "url": "https://bazylika-pszow.pl/wspolnota-matki-milosiernego/"
+            }
+        ],
+
+        "worthSeeing": [
+
+            {
+                "value": "//li[@id='menu-item-13895']/a",
+                "url": "https://bazylika-pszow.pl/litania-do-pani-usmiechnietej/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-1864']/a",
+                "url": "https://bazylika-pszow.pl/regulamin-cmentarza/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-16783']/a",
+                "url": "https://bazylika-pszow.pl/delegat-ds-ochrony-dzieci-i-mlodziezy/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25002']/a",
+                "url": "https://www.archidiecezjakatowicka.pl/"
+            },
+
+            {
+                "value": "//li[@id='menu-item-25003']/a",
+                "url": "https://www.paulus.org.pl/czytania"
+            }
+        ],
+
+    "socialMedia": [
+
+        {
+            "value": "//div[@id='mobile-dropdown']/nav/div[2]/div/ul/li[1]/a",
+            "url": "https://www.facebook.com/"
+        },
+
+        {
+            "value": "//div[@id='mobile-dropdown']/nav/div[2]/div/ul/li[2]/a",
+            "url": "https://www.youtube.com/"
+        }
+    ]
+}

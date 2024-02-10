@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="'O parafii' dropdown list">
+
+    <test name="Expanding and collapsing the dropdown list">
+        <classes>
+            <class name="mainmenu.aboutparish.ContentsTest"/>
+        </classes>
+    </test>
+
+    <test name="'O parafii' dropdown list links">
+        <parameter name="filename" value="links"/>
+
+        <classes>
+            <class name="mainmenu.aboutparish.LinksTest"/>
+        </classes>
+    </test>
+
+</suite>

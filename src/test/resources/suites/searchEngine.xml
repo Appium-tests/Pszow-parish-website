@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Search engine">
+
+    <test name="Opening the search results page">
+        <classes>
+            <class name="searchengine.OpeningSearchResultsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Searching articles">
+        <parameter name="filename" value="PP_Phrases"/>
+
+        <classes>
+            <class name="searchengine.SearchingArticlesTest"/>
+        </classes>
+    </test>
+
+</suite>

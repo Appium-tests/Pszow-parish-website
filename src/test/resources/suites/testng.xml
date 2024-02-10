@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Pszów parish website tests">
+
+    <suite-files>
+        <suite-file path="logo.xml"/>
+        <suite-file path="mainMenu.xml"/>
+        <suite-file path="searchEngine.xml"/>
+        <suite-file path="socialMedia.xml"/>
+        <suite-file path="photoGallery.xml"/>
+    </suite-files>
+
+</suite>

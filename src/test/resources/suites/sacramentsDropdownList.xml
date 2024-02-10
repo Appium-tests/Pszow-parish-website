@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="'Sakramenty' dropdown list">
+
+    <test name="Expanding and collapsing the dropdown list">
+        <classes>
+            <class name="mainmenu.sacraments.ContentsTest"/>
+        </classes>
+    </test>
+
+    <test name="'Sakramenty' dropdownlist links">
+        <parameter name="filename" value="links"/>
+
+        <classes>
+            <class name="mainmenu.sacraments.LinksTest"/>
+        </classes>
+    </test>
+
+</suite>

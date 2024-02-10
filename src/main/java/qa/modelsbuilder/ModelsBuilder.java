@@ -1,16 +1,17 @@
-package qa.testdataprovider;
+package qa.modelsbuilder;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import qa.models.LinkData;
+import qa.testdataloader.TestDataLoader;
 
 import java.util.stream.IntStream;
 
-public class TestDataProvider {
+public class ModelsBuilder {
 
-    public static LinkData[] getLinksData(String source, String key) {
+    public static LinkData[] getLinksData(String key) {
 
-        JSONObject jsonObject = new JSONObject(source);
+        JSONObject jsonObject = new JSONObject(TestDataLoader.getSource());
         JSONArray jsonArray = jsonObject.getJSONArray(key);
 
         return IntStream.range(0, jsonArray.length())
@@ -22,9 +23,9 @@ public class TestDataProvider {
                 .toArray(LinkData[]::new);
     }
 
-    public static String[] getStrings(String source, String key) {
+    public static String[] getStrings(String key) {
 
-        JSONObject jsonObject = new JSONObject(source);
+        JSONObject jsonObject = new JSONObject(TestDataLoader.getSource());
         JSONArray jsonArray = jsonObject.getJSONArray(key);
 
         return IntStream.range(0, jsonArray.length())

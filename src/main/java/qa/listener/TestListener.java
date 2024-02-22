@@ -1,5 +1,6 @@
 package qa.listener;
 
+import io.qameta.allure.Attachment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestListener;
@@ -7,8 +8,13 @@ import org.testng.ITestResult;
 
 public class TestListener implements ITestListener {
 
-    private Logger logger = LoggerFactory.getLogger(TestListener.class);
+    private final Logger logger = LoggerFactory.getLogger(TestListener.class);
 
+    @Attachment(value = "{0}", type = "text/plain")
+    private static String saveTextLog(String message) {
+
+        return message;
+    }
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -20,17 +26,20 @@ public class TestListener implements ITestListener {
     public void onTestSuccess(ITestResult result) {
 
         logger.info("PASSED on " + result.getMethod());
+        saveTextLog(result.getMethod().getMethodName() + "- PASSED");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
 
         logger.info("FAILED on " + result.getThrowable().toString());
+        saveTextLog(result.getMethod().getMethodName() + "- FAILED");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
 
         logger.info("SKIPPED on " + result.getMethod());
+        saveTextLog(result.getMethod().getMethodName() + "- SKIPPED");
     }
 }

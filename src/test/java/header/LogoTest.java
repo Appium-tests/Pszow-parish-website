@@ -1,12 +1,16 @@
 package header;
 
-import org.testng.Assert;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.base.BaseTest;
 import qa.enums.URLs;
 import qa.pageobject.header.Header;
 
+@Epic("E2E")
+@Feature("Logo")
 public class LogoTest extends BaseTest {
 
     private Header header;
@@ -19,6 +23,7 @@ public class LogoTest extends BaseTest {
     }
 
     @Test
+    @Description("Tapping the logo")
     public void tappingLogo() {
 
         header.tapLogo();

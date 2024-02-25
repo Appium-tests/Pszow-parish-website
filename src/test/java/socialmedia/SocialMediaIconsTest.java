@@ -1,5 +1,8 @@
 package socialmedia;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -9,18 +12,19 @@ import qa.dataprovidernames.DataProviderNames;
 import qa.dataproviders.SocialMediaDataProviders;
 import qa.enums.URLs;
 import qa.models.LinkData;
-import qa.pageobject.socialmedia.SocialMedia;
+import qa.steps.SocialMediaSteps;
 
+@Epic("E@E")
+@Feature("Social media icons")
 public class SocialMediaIconsTest extends BaseTest {
-
-    private SocialMedia socialMedia;
+    private SocialMediaSteps steps;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        socialMedia = new SocialMedia(getDriver());
+        steps = new SocialMediaSteps(getDriver());
     }
 
     private void checkIfUrlContains(String url) {
@@ -35,7 +39,8 @@ public class SocialMediaIconsTest extends BaseTest {
     @Test(dataProvider = DataProviderNames.SOCIAL_MEDIA, dataProviderClass = SocialMediaDataProviders.class)
     public void links(LinkData data) {
 
-        socialMedia.clickIcon(data.getValue());
+        Allure.description("Tapping the \"" + data.getValue() + "\" icon");
+        steps.tapIcon(data.getValue());
         checkIfUrlContains(data.getUrl());
     }
 }

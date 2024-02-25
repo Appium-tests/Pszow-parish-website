@@ -8,6 +8,7 @@ import qa.base.BaseTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.MainDropdownList;
 
+
 public class TriggerElementTest extends BaseTest {
 
     private MainDropdownList mainDropdownList;

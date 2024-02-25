@@ -1,16 +1,20 @@
 package photogallery;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import qa.base.BaseTest;
 import qa.enums.URLs;
 import qa.pageobject.CookiesMessageBox;
-import qa.pageobject.photogallery.PhotoGalleryPage;
+import qa.steps.PhotoGalleryPageSteps;
 
+@Epic("E2E")
+@Feature("Expanding and collapsing the photo gallery items")
 public class PhotoGalleryPageTest extends BaseTest {
-
-    private PhotoGalleryPage photoGalleryPage;
+    private PhotoGalleryPageSteps steps;
 
     @BeforeMethod
     public void init() throws IllegalAccessException {
@@ -19,9 +23,8 @@ public class PhotoGalleryPageTest extends BaseTest {
 
         CookiesMessageBox cookiesMessageBox = new CookiesMessageBox(getDriver());
         cookiesMessageBox.tapAcceptButton();
-
-        photoGalleryPage = new PhotoGalleryPage(getDriver());
-        photoGalleryPage.findItems();
+        steps = new PhotoGalleryPageSteps(getDriver());
+        steps.getPhotoGalleryPage().findItems();
     }
 
 
@@ -30,13 +33,14 @@ public class PhotoGalleryPageTest extends BaseTest {
 
         SoftAssert softAssert = new SoftAssert();
 
-        for (int i = 1; i < photoGalleryPage.getItemsCount(); i++) {
+        for (int i = 1; i < steps.getPhotoGalleryPage().getItemsCount(); i++) {
 
-            getInteractions().scroll(photoGalleryPage.getItem(i).getIconClosedLocator());
-            photoGalleryPage.getItem(i).tapIconClosed();
+            Allure.description("Expanding the \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" photo gallery");
+            getInteractions().scroll(steps.getPhotoGalleryPage().getItem(i).getIconClosedLocator());
+            steps.tapIconClosed(i);
 
-            softAssert.assertFalse(photoGalleryPage.getItem(i).getGalleryContentLocator().isEmpty(),
-                    "The photo gallery \"" + photoGalleryPage.getItem(i).getTitle() + "\" is not expanded");
+            softAssert.assertFalse(steps.getPhotoGalleryPage().getItem(i).getGalleryContentLocator().isEmpty(),
+                    "The photo gallery \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" is not expanded");
         }
 
         softAssert.assertAll();
@@ -47,14 +51,15 @@ public class PhotoGalleryPageTest extends BaseTest {
 
         SoftAssert softAssert = new SoftAssert();
 
-        for (int i = 1; i < photoGalleryPage.getItemsCount(); i++) {
+        for (int i = 1; i < steps.getPhotoGalleryPage().getItemsCount(); i++) {
 
-           getInteractions().scroll(photoGalleryPage.getItem(i).getIconClosedLocator());
-           photoGalleryPage.getItem(i).tapIconClosed();
-           photoGalleryPage.getItem(i).tapIconOpened();
+           Allure.description("Collapsing the \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" photo gallery");
+           getInteractions().scroll(steps.getPhotoGalleryPage().getItem(i).getIconClosedLocator());
+           steps.tapIconClosed(i);
+           steps.tapIconOpened(i);
 
-           softAssert.assertTrue(photoGalleryPage.getItem(i).getGalleryContentLocator().isEmpty(),
-                    "The photo gallery \"" + photoGalleryPage.getItem(i).getTitle() + "\" is not collapsed");
+           softAssert.assertTrue(steps.getPhotoGalleryPage().getItem(i).getGalleryContentLocator().isEmpty(),
+                    "The photo gallery \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" is not collapsed");
         }
 
         softAssert.assertAll();

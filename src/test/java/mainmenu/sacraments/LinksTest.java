@@ -1,5 +1,8 @@
 package mainmenu.sacraments;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.base.DropdownListTest;
@@ -8,24 +11,28 @@ import qa.dataproviders.DropdownListDataProviders;
 import qa.enums.URLs;
 import qa.models.LinkData;
 import qa.pageobject.menu.SacramentsDropdownList;
+import qa.steps.DropdownListSteps;
 
+@Epic("E2E")
+@Feature("The \"Sakramenty\" dropdown list links")
 public class LinksTest extends DropdownListTest {
 
-    private SacramentsDropdownList sacramentsDropdownList;
+    DropdownListSteps steps;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        sacramentsDropdownList = new SacramentsDropdownList(getDriver());
-        sacramentsDropdownList.tapTriggerElement();
+        steps = new DropdownListSteps(new SacramentsDropdownList(getDriver()));
+        steps.tapTriggerElement();
     }
 
     @Test(dataProvider = DataProviderNames.SACRAMENTS, dataProviderClass = DropdownListDataProviders.class)
     public void links(LinkData linkData) {
 
-        sacramentsDropdownList.tapLink(linkData.getValue());
+        Allure.description("Tapping the " + linkData.getValue() + " link");
+        steps.tapLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }
 }

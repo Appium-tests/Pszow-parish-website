@@ -8,35 +8,35 @@ import org.testng.annotations.Test;
 import qa.base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.AboutParishDropdownList;
+import qa.steps.DropdownListSteps;
 
 @Epic("E2E")
 @Feature("Expanding and collapsing the \"O parafii\" dropdown list")
 public class ContentsTest extends DropdownListTest {
-
-    private AboutParishDropdownList aboutParishDropdownList;
+    private DropdownListSteps steps;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        aboutParishDropdownList = new AboutParishDropdownList(getDriver());
+        steps = new DropdownListSteps(new AboutParishDropdownList(getDriver()));
     }
 
     @Test(priority = 1)
     @Description("Expanding the menu dropdown list")
     public void expandingDropdownList() {
 
-        aboutParishDropdownList.tapTriggerElement();
-        checkContentsVisibility(aboutParishDropdownList.getContentsLocator(), "The \"O Parafii\" dropdown list is not expanded");
+        steps.tapTriggerElement();
+        checkContentsVisibility(steps.getDropdownList().getContentsLocator(), "The \"O Parafii\" dropdown list is not expanded");
     }
 
     @Test(priority = 2)
     @Description("Collapsing the menu dropdown list")
     public void collapsingDropdownList() {
 
-        aboutParishDropdownList.tapTriggerElement();
-        aboutParishDropdownList.tapTriggerElement();
-        checkContentsInvisibility(aboutParishDropdownList.getContentsLocator(), "The \"O Parafii\" dropdown list is not collapsed");
+        steps.tapTriggerElement();
+        steps.tapTriggerElement();
+        checkContentsInvisibility(steps.getDropdownList().getContentsLocator(), "The \"O Parafii\" dropdown list is not collapsed");
     }
 }

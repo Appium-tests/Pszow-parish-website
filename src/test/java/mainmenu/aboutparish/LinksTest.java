@@ -11,27 +11,26 @@ import qa.dataproviders.DropdownListDataProviders;
 import qa.enums.URLs;
 import qa.models.LinkData;
 import qa.pageobject.menu.AboutParishDropdownList;
+import qa.steps.DropdownListSteps;
 
 @Epic("E2E")
 @Feature("The \"O parafii\" menu links")
 public class LinksTest extends DropdownListTest {
-
-    private AboutParishDropdownList aboutParishDropdownList;
+    private DropdownListSteps steps;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        aboutParishDropdownList = new AboutParishDropdownList(getDriver());
-        aboutParishDropdownList.tapTriggerElement();
+        steps = new DropdownListSteps(new AboutParishDropdownList(getDriver()));
     }
 
     @Test(dataProvider = DataProviderNames.ABOUT_PARISH, dataProviderClass = DropdownListDataProviders.class)
     public void linksTest(LinkData linkData) {
 
         Allure.description("Tapping the " + linkData.getValue() + " link");
-        aboutParishDropdownList.tapLink(linkData.getValue());
+        steps.tapLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }
 }

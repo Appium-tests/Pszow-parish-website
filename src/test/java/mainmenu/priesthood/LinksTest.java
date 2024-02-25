@@ -11,27 +11,27 @@ import qa.dataproviders.DropdownListDataProviders;
 import qa.enums.URLs;
 import qa.models.LinkData;
 import qa.pageobject.menu.PriesthoodDropdownList;
+import qa.steps.DropdownListSteps;
 
 @Epic("E2E")
 @Feature("The \"Duszpasterstwo\" links")
 public class LinksTest extends DropdownListTest {
-
-    private PriesthoodDropdownList priesthoodDropdownList;
+    private DropdownListSteps steps;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        priesthoodDropdownList = new PriesthoodDropdownList(getDriver());
-        priesthoodDropdownList.tapTriggerElement();
+        steps = new DropdownListSteps(new PriesthoodDropdownList(getDriver()));
+        steps.tapTriggerElement();
     }
 
     @Test(dataProvider = DataProviderNames.PRIESTHOOD, dataProviderClass = DropdownListDataProviders.class)
     public void linksTest(LinkData linkData) {
 
         Allure.description("Tapping the " + linkData.getValue() + " link");
-        priesthoodDropdownList.tapLink(linkData.getValue());
+        steps.tapLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }
 }

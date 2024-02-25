@@ -34,7 +34,7 @@ public class BaseTest {
     }
 
 
-    @Parameters({"filename", "downloadMode"})
+    @Parameters({"filename"})
     @BeforeClass
     public void fetchTestData(@Optional("noFilename") String filename) {
 

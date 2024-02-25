@@ -3,6 +3,10 @@
 
 <suite name="Photo gallery page">
 
+    <listeners>
+        <listener class-name="qa.listener.TestListener"/>
+    </listeners>
+
     <test name="Clicking photo gallery items">
         <classes>
             <class name="photogallery.PhotoGalleryPageTest"/>

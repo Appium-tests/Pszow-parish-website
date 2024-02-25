@@ -3,6 +3,10 @@
 
 <suite name="'Duszpasterstwo' dropdown list">
 
+    <listeners>
+        <listener class-name="qa.listener.TestListener"/>
+    </listeners>
+
     <test name="Expanding and collapsing the dropdown list">
         <classes>
             <class name="mainmenu.priesthood.ContentsTest"/>

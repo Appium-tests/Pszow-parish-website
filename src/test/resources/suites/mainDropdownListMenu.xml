@@ -3,6 +3,10 @@
 
 <suite name="Main dropdown list menu">
 
+    <listeners>
+        <listener class-name="qa.listener.TestListener"/>
+    </listeners>
+
     <test name="Expanding and collapsing the main dropdown list menu">
         <classes>
             <class name="mainmenu.main.ContentsTest"/>

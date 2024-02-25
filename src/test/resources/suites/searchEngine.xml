@@ -3,6 +3,10 @@
 
 <suite name="Search engine">
 
+    <listeners>
+        <listener class-name="qa.listener.TestListener"/>
+    </listeners>
+
     <test name="Opening the search results page">
         <classes>
             <class name="searchengine.OpeningSearchResultsPageTest"/>

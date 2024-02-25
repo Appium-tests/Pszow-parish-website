@@ -3,6 +3,10 @@
 
 <suite name="Logo">
 
+    <listeners>
+        <listener class-name="qa.listener.TestListener"/>
+    </listeners>
+
     <test name="Clicking the logo">
         <classes>
             <class name="header.LogoTest"/>

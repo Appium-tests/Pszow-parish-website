@@ -3,6 +3,10 @@
 
 <suite name="Social media icons">
 
+    <listeners>
+        <listener class-name="qa.listener.TestListener"/>
+    </listeners>
+
     <test name="Clicking social media icons">
         <parameter name="filename" value="links"/>
         <parameter name="downloadMode" value="LOCAL"/>

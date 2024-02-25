@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import qa.base.BasePage;
-import qa.support.byfinder.ByFinder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +22,7 @@ public class PhotoGalleryPage extends BasePage {
     @FindBy(className = "elementor-accordion")
     WebElement elementorAccordion;
 
-    public void findItems() throws IllegalAccessException {
+    public void findItems() {
 
         getWebDriverWait().until(ExpectedConditions.visibilityOf(elementorAccordion));
         items = elementorAccordion.findElements(By.cssSelector("div.elementor-accordion-item"));

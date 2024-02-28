@@ -5,7 +5,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import qa.base.DropdownListTest;
+import base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.AboutParishDropdownList;
 import qa.steps.DropdownListSteps;

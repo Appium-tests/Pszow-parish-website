@@ -4,7 +4,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import qa.base.BaseTest;
+import base.BaseTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.MainDropdownList;
 

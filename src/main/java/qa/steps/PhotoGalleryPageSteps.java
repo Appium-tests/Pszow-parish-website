@@ -24,7 +24,7 @@ public class PhotoGalleryPageSteps {
     public void tapIconOpened(int index) {
 
         Allure.step("Tap the icon opened of the \"" + photoGalleryPage.getItem(index).getTitle() + "\" gallery");
-        photoGalleryPage.getItem(index).tapIconClosed();
+        photoGalleryPage.getItem(index).tapIconOpened();
     }
 
 }

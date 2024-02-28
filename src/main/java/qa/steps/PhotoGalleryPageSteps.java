@@ -15,14 +15,14 @@ public class PhotoGalleryPageSteps {
         this.photoGalleryPage = new PhotoGalleryPage(driver);
     }
 
-    @io.qase.api.annotation.Step("Touch the icon closed")
+    @io.qase.api.annotation.Step("Touch a icon \"closed\"")
     public void touchIconClosed(int index) {
 
         Allure.step("Touch the icon closed of the \"" + photoGalleryPage.getItem(index).getTitle() + "\" gallery");
         photoGalleryPage.getItem(index).touchIconClosed();
     }
 
-    @io.qase.api.annotation.Step("Touch the icon opened")
+    @io.qase.api.annotation.Step("Touch a icon \"opened\"")
     public void touchIconOpened(int index) {
 
         Allure.step("Touch the icon opened of the \"" + photoGalleryPage.getItem(index).getTitle() + "\" gallery");

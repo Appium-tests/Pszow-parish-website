@@ -15,7 +15,7 @@ public class SearchEngineSteps {
         this.searchEngine = new SearchEngine(driver);
     }
 
-    @io.qase.api.annotation.Step("Enter a phrase")
+    @io.qase.api.annotation.Step("Enter a phrase in the search field")
     public void setPhrase(String phrase) {
 
         Allure.step("Enter the \"" + phrase + "\" phrase");

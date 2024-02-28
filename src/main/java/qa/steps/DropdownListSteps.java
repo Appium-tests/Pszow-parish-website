@@ -21,7 +21,7 @@ public class DropdownListSteps {
         dropdownList.touchTriggerElement();
     }
 
-    @io.qase.api.annotation.Step("Touch the link from the dropdown list")
+    @io.qase.api.annotation.Step("Touch a link from the dropdown list")
     public void touchLink(String value) {
 
         Allure.step("Touch the \"" + value + "\" link");

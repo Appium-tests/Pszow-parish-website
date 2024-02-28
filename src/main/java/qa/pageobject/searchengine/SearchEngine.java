@@ -29,7 +29,7 @@ public class SearchEngine extends BasePage {
         return searchField.getAttribute("value");
     }
 
-    public void tapSearchButton() {
+    public void touchSearchButton() {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(searchButton)).click();
     }

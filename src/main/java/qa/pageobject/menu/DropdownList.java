@@ -27,12 +27,12 @@ public abstract class DropdownList extends BasePage {
         return getDriver().findElement(contents);
     }
 
-    public void tapTriggerElement() {
+    public void touchTriggerElement() {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(triggerElement)).click();
     }
 
-    public void tapLink(String value) {
+    public void touchLink(String value) {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(value))).click();
     }

@@ -17,7 +17,7 @@ public class Header extends BasePage {
     @FindBy(className = "custom-logo")
     WebElement logo;
 
-    public void tapLogo() {
+    public void touchLogo() {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(logo)).click();
     }

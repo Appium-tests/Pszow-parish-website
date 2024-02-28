@@ -12,7 +12,7 @@ public class SocialMedia extends BasePage {
         super(driver);
     }
 
-    public void tapIcon(String selector) {
+    public void touchIcon(String selector) {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(selector))).click();
     }

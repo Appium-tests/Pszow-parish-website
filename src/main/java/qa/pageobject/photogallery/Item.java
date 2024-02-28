@@ -20,12 +20,12 @@ public class Item extends BasePage {
         this.parent = parent;
     }
 
-    public void tapIconClosed() {
+    public void touchIconClosed() {
 
         parent.findElement(By.cssSelector(iconClosedSelector)).click();
     }
 
-    public void tapIconOpened() {
+    public void touchIconOpened() {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(parent.findElement(By.cssSelector(iconOpenedSelector)))).click();
     }

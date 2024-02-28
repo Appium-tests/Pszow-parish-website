@@ -3,6 +3,8 @@ package mainmenu.worthseeing;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.DropdownListTest;
@@ -24,6 +26,8 @@ public class ContentsTest extends DropdownListTest {
     }
 
     @Test(priority = 1)
+    @QaseId(14)
+    @QaseTitle("Expanding the \"Warto zobaczyć\" dropdown list")
     @Description("Expanding the \"Warto zobaczyć\" dropdown list")
     public void expandingDropdownList() {
 
@@ -32,6 +36,8 @@ public class ContentsTest extends DropdownListTest {
     }
 
     @Test(priority = 2)
+    @QaseId(15)
+    @QaseTitle("Collapsing the \"Warto zobaczyć\" dropdown list")
     @Description("Collapsing the \"Warto zobaczyć\" dropdown list")
     public void collapsingDropdownList() {
 

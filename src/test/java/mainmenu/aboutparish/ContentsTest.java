@@ -3,6 +3,8 @@ package mainmenu.aboutparish;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.DropdownListTest;
@@ -24,6 +26,8 @@ public class ContentsTest extends DropdownListTest {
     }
 
     @Test(priority = 1)
+    @QaseId(5)
+    @QaseTitle("Expanding the \"O Parafii\" drop-down list")
     @Description("Expanding the menu dropdown list")
     public void expandingDropdownList() {
 
@@ -32,6 +36,8 @@ public class ContentsTest extends DropdownListTest {
     }
 
     @Test(priority = 2)
+    @QaseId(6)
+    @QaseTitle("Collapsing the \"O Parafii\" drop-down list")
     @Description("Collapsing the menu dropdown list")
     public void collapsingDropdownList() {
 

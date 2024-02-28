@@ -1,8 +1,11 @@
 package mainmenu.main;
 
 import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.DropdownListTest;
@@ -14,7 +17,7 @@ import qa.pageobject.menu.MainDropdownList;
 import qa.steps.DropdownListSteps;
 
 @Epic("E2E")
-@Feature("Main menu links")
+@Feature("Main dropdown list links")
 public class LinksTest extends DropdownListTest {
     private DropdownListSteps steps;
 
@@ -27,9 +30,11 @@ public class LinksTest extends DropdownListTest {
     }
 
     @Test(dataProvider = DataProviderNames.MAIN_DROPDOWN_LIST, dataProviderClass = DropdownListDataProviders.class)
+    @QaseId(4)
+    @QaseTitle("Touching the main dropdown list links")
     public void linksTest(LinkData linkData) {
 
-        Allure.description("Tapping the " + linkData.getValue() + " link");
+        Allure.description("Touching the " + linkData.getValue() + " link");
         steps.touchLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }

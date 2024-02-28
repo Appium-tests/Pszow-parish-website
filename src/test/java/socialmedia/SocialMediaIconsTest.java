@@ -3,6 +3,8 @@ package socialmedia;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -37,6 +39,8 @@ public class SocialMediaIconsTest extends BaseTest {
     }
 
     @Test(dataProvider = DataProviderNames.SOCIAL_MEDIA, dataProviderClass = SocialMediaDataProviders.class)
+    @QaseId(17)
+    @QaseTitle("The socialmedia icons")
     public void links(LinkData data) {
 
         Allure.description("Tapping the \"" + data.getValue() + "\" icon");

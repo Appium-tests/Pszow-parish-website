@@ -3,6 +3,8 @@ package searchengine;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -39,6 +41,8 @@ public class SearchingArticlesTest extends BaseTest {
     }
 
     @Test(dataProvider = DataProviderNames.CORRECT, dataProviderClass = PhrasesDataProviders.class)
+    @QaseId(21)
+    @QaseTitle("Searching with a correct phrase")
     public void correctPhrase(String phrase) {
 
         Allure.description("Searching the article with the \"" + phrase + "\" as the correct phrase");
@@ -48,6 +52,8 @@ public class SearchingArticlesTest extends BaseTest {
     }
 
     @Test(dataProvider = DataProviderNames.INCORRECT, dataProviderClass = PhrasesDataProviders.class)
+    @QaseId(22)
+    @QaseTitle("Searching with an incorrect phrase")
     public void incorrectPhrase(String phrase) {
 
         Allure.description("Searching the article with the \"" + phrase + "\" as the incorrect phrase");

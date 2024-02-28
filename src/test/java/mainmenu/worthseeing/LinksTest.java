@@ -3,6 +3,8 @@ package mainmenu.worthseeing;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.DropdownListTest;
@@ -28,9 +30,11 @@ public class LinksTest extends DropdownListTest {
     }
 
     @Test(dataProvider = DataProviderNames.WORTH_SEEING, dataProviderClass = DropdownListDataProviders.class)
+    @QaseId(16)
+    @QaseTitle("The \"Warto zobaczyć\" dropdown list links")
     public void links(LinkData linkData) {
 
-        Allure.description("Tapping the " + linkData.getValue() + " link");
+        Allure.description("Touching the " + linkData.getValue() + " link");
         steps.touchLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }

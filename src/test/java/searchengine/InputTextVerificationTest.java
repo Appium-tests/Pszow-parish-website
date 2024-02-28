@@ -3,6 +3,8 @@ package searchengine;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -24,6 +26,8 @@ public class InputTextVerificationTest extends BaseTest {
     }
 
     @Test
+    @QaseId(20)
+    @QaseTitle("Input text verification")
     @Description("Checking input of the search field")
     public void byTappingSearchButton() {
 

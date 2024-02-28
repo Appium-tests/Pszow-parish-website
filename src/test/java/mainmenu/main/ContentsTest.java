@@ -27,7 +27,7 @@ public class ContentsTest extends DropdownListTest {
 
     @Test(priority = 1)
     @QaseId(2)
-    @QaseTitle("Expanding the main drop-down list")
+    @QaseTitle("Expanding the main dropdown list")
     @Description("Expanding the main drop-down list")
     public void expandingDropdownList() {
 
@@ -36,6 +36,8 @@ public class ContentsTest extends DropdownListTest {
     }
 
     @Test(priority = 2)
+    @QaseId(3)
+    @QaseTitle("Collapsing the main dropdown list")
     @Description("Collapsing the main menu dropdown list")
     public void collapsingDropdownList() {
 

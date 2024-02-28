@@ -67,7 +67,7 @@ public class BaseTest {
     protected void expandMainDropdownList() {
 
         MainDropdownList mainDropdownList = new MainDropdownList(getDriver());
-        mainDropdownList.tapTriggerElement();
+        mainDropdownList.touchTriggerElement();
     }
 
     protected void waitForUrl(String url, String assertionMessage) {

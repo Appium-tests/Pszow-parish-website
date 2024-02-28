@@ -6,10 +6,10 @@
     <listeners>
         <listener class-name="qa.listener.TestListener"/>
     </listeners>
-
-    <test name="Opening the search results page">
+    
+    <test name="Input text verification">
         <classes>
-            <class name="searchengine.OpeningSearchResultsPageTest"/>
+            <class name="searchengine.InputTextVerificationTest"/>
         </classes>
     </test>
 

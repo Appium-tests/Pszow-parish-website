@@ -3,24 +3,29 @@ package searchengine;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import qa.base.SearchEngineTest;
+import base.BaseTest;
 import qa.dataprovidernames.DataProviderNames;
 import qa.dataproviders.PhrasesDataProviders;
+import qa.enums.URLs;
 import qa.pageobject.searchresultspage.SearchResultsPage;
 import qa.steps.SearchEngineSteps;
 
 @Epic("E2E")
 @Feature("Search engine")
-public class SearchingArticlesTest extends SearchEngineTest {
+public class SearchingArticlesTest extends BaseTest {
     private SearchResultsPage searchResultsPage;
     private SearchEngineSteps steps;
+    private final String urlFraction = "https://bazylika-pszow.pl/?s";
 
     @BeforeMethod
-    public void initObjects() {
+    public void init() {
 
+        goToUrl(URLs.HOME_PAGE.getName());
+        expandMainDropdownList();
         steps = new SearchEngineSteps(getDriver());
         searchResultsPage = new SearchResultsPage(getDriver());
     }
@@ -30,7 +35,7 @@ public class SearchingArticlesTest extends SearchEngineTest {
         steps.setPhrase(phrase);
         getDriver().hideKeyboard();
         steps.tapSearchButton();
-        waitForSearchResultsPage();
+        getWebDriverWait().until(ExpectedConditions.urlContains(urlFraction));
     }
 
     @Test(dataProvider = DataProviderNames.CORRECT, dataProviderClass = PhrasesDataProviders.class)

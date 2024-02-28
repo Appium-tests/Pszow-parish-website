@@ -3,6 +3,8 @@ package photogallery;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -29,6 +31,8 @@ public class PhotoGalleryPageTest extends BaseTest {
 
 
     @Test
+    @QaseId(18)
+    @QaseTitle("Expanding photo gallery contents")
     public void expandingGallery() {
 
         SoftAssert softAssert = new SoftAssert();
@@ -47,6 +51,8 @@ public class PhotoGalleryPageTest extends BaseTest {
     }
 
     @Test
+    @QaseId(19)
+    @QaseTitle("Collapsing photo gallery contents")
     public void collapsingGallery() {
 
         SoftAssert softAssert = new SoftAssert();

@@ -13,9 +13,10 @@ public class SocialMediaSteps {
         this.socialMedia = new SocialMedia(driver);
     }
 
-    public void tapIcon(String value) {
+    @io.qase.api.annotation.Step("Touch a icon")
+    public void touchIcon(String value) {
 
-        Allure.step("Tap the \"" + value + "\" icon");
-        socialMedia.tapIcon(value);
+        Allure.step("Touch the \"" + value + "\" icon");
+        socialMedia.touchIcon(value);
     }
 }

@@ -1,7 +1,6 @@
 package qa.steps;
 
 import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 import lombok.Getter;
 import qa.pageobject.menu.DropdownList;
 
@@ -15,16 +14,19 @@ public class DropdownListSteps {
         this.dropdownList = dropdownList;
     }
 
-    @Step("Tap the trigger element")
-    public void tapTriggerElement() {
+    @io.qameta.allure.Step("Touch the trigger element")
+    @io.qase.api.annotation.Step("Touch the trigger element")
+    public void touchTriggerElement() {
 
-        dropdownList.tapTriggerElement();
+        dropdownList.touchTriggerElement();
     }
 
-    public void tapLink(String value) {
+    @io.qase.api.annotation.Step("Touch the link from the dropdown list")
+    public void touchLink(String value) {
 
-        Allure.step("Tap the \"" + value + "\" link");
-        dropdownList.tapLink(value);
+        Allure.step("Touch the \"" + value + "\" link");
+
+        dropdownList.touchLink(value);
     }
 
 }

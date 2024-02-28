@@ -2,7 +2,6 @@ package qa.steps;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 import lombok.Getter;
 import qa.pageobject.searchengine.SearchEngine;
 
@@ -16,16 +15,18 @@ public class SearchEngineSteps {
         this.searchEngine = new SearchEngine(driver);
     }
 
+    @io.qase.api.annotation.Step("Enter a phrase")
     public void setPhrase(String phrase) {
 
-        Allure.step("Set the \"" + phrase + "\" phrase");
+        Allure.step("Enter the \"" + phrase + "\" phrase");
         searchEngine.setPhrase(phrase);
     }
 
-    @Step("Tap the search button")
-    public void tapSearchButton() {
+    @io.qase.api.annotation.Step("Touch the search button")
+    @io.qameta.allure.Step("Touch the search button")
+    public void touchSearchButton() {
 
-        searchEngine.tapSearchButton();
+        searchEngine.touchSearchButton();
     }
 
 }

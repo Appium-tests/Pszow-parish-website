@@ -1,7 +1,6 @@
 package qa.steps;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.qameta.allure.Step;
 import qa.pageobject.header.Header;
 
 public class HeaderSteps {
@@ -13,9 +12,10 @@ public class HeaderSteps {
         this.header = new Header(driver);
     }
 
-    @Step("Tap the logo")
-    public void tapLogo() {
+    @io.qameta.allure.Step("Touch the logo")
+    @io.qase.api.annotation.Step("Touch the logo")
+    public void touchLogo() {
 
-        header.tapLogo();
+        header.touchLogo();
     }
 }

@@ -27,7 +27,7 @@ public class ContentsTest extends DropdownListTest {
     @Description("Expanding the \"Duszpasterstwo\" dropdown list")
     public void expandingDropdownList() {
 
-        steps.tapTriggerElement();
+        steps.touchTriggerElement();
         checkContentsVisibility(steps.getDropdownList().getContentsLocator(), "The \"Duszpasterstwo\" dropdown list is not expanded");
     }
 
@@ -35,8 +35,8 @@ public class ContentsTest extends DropdownListTest {
     @Description("Collapsing the \"Duszpasterstwo\" dropdown list")
     public void collapsingDropdownList() {
 
-        steps.tapTriggerElement();
-        steps.tapTriggerElement();
+        steps.touchTriggerElement();
+        steps.touchTriggerElement();
         checkContentsInvisibility(steps.getDropdownList().getContentsLocator(), "The \"Duszpasterstwo\" dropdown list is not collapsed");
     }
 }

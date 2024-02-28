@@ -3,6 +3,8 @@ package mainmenu.main;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qase.api.annotation.QaseId;
+import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.DropdownListTest;
@@ -24,10 +26,12 @@ public class ContentsTest extends DropdownListTest {
     }
 
     @Test(priority = 1)
-    @Description("Expanding the main menu dropdown list")
+    @QaseId(2)
+    @QaseTitle("Expanding the main drop-down list")
+    @Description("Expanding the main drop-down list")
     public void expandingDropdownList() {
 
-        steps.tapTriggerElement();
+        steps.touchTriggerElement();
         checkContentsVisibility(steps.getDropdownList().getContentsLocator(), "The main dropdown list is not expanded");
     }
 
@@ -35,8 +39,8 @@ public class ContentsTest extends DropdownListTest {
     @Description("Collapsing the main menu dropdown list")
     public void collapsingDropdownList() {
 
-        steps.tapTriggerElement();
-        steps.tapTriggerElement();
+        steps.touchTriggerElement();
+        steps.touchTriggerElement();
         checkContentsInvisibility(steps.getDropdownList().getContentsLocator(), "The main dropdown list is not collapsed");
     }
 }

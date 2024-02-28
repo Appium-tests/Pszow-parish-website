@@ -32,7 +32,7 @@ public class TriggerElementTest extends BaseTest {
     @Test
     public void closeButtonVisibility() {
 
-        mainDropdownList.tapTriggerElement();
+        mainDropdownList.touchTriggerElement();
         checkCloseButtonVisibility();
     }
 }

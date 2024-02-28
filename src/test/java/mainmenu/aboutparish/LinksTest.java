@@ -30,7 +30,7 @@ public class LinksTest extends DropdownListTest {
     public void linksTest(LinkData linkData) {
 
         Allure.description("Tapping the " + linkData.getValue() + " link");
-        steps.tapLink(linkData.getValue());
+        steps.touchLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }
 }

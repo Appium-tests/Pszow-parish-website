@@ -34,7 +34,7 @@ public class SearchingArticlesTest extends BaseTest {
 
         steps.setPhrase(phrase);
         getDriver().hideKeyboard();
-        steps.tapSearchButton();
+        steps.touchSearchButton();
         getWebDriverWait().until(ExpectedConditions.urlContains(urlFraction));
     }
 

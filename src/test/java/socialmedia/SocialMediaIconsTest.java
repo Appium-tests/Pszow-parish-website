@@ -40,7 +40,7 @@ public class SocialMediaIconsTest extends BaseTest {
     public void links(LinkData data) {
 
         Allure.description("Tapping the \"" + data.getValue() + "\" icon");
-        steps.tapIcon(data.getValue());
+        steps.touchIcon(data.getValue());
         checkIfUrlContains(data.getUrl());
     }
 }

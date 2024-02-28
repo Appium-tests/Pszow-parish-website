@@ -37,7 +37,7 @@ public class PhotoGalleryPageTest extends BaseTest {
 
             Allure.description("Expanding the \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" photo gallery");
             getInteractions().scroll(steps.getPhotoGalleryPage().getItem(i).getIconClosedLocator());
-            steps.tapIconClosed(i);
+            steps.touchIconClosed(i);
 
             softAssert.assertFalse(steps.getPhotoGalleryPage().getItem(i).getGalleryContentLocator().isEmpty(),
                     "The photo gallery \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" is not expanded");
@@ -55,8 +55,8 @@ public class PhotoGalleryPageTest extends BaseTest {
 
            Allure.description("Collapsing the \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" photo gallery");
            getInteractions().scroll(steps.getPhotoGalleryPage().getItem(i).getIconClosedLocator());
-           steps.tapIconClosed(i);
-           steps.tapIconOpened(i);
+           steps.touchIconClosed(i);
+           steps.touchIconOpened(i);
 
            softAssert.assertTrue(steps.getPhotoGalleryPage().getItem(i).getGalleryContentLocator().isEmpty(),
                     "The photo gallery \"" + steps.getPhotoGalleryPage().getItem(i).getTitle() + "\" is not collapsed");

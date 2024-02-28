@@ -25,14 +25,14 @@ public class LinksTest extends DropdownListTest {
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
         steps = new DropdownListSteps(new SacramentsDropdownList(getDriver()));
-        steps.tapTriggerElement();
+        steps.touchTriggerElement();
     }
 
     @Test(dataProvider = DataProviderNames.SACRAMENTS, dataProviderClass = DropdownListDataProviders.class)
     public void links(LinkData linkData) {
 
         Allure.description("Tapping the " + linkData.getValue() + " link");
-        steps.tapLink(linkData.getValue());
+        steps.touchLink(linkData.getValue());
         waitForUrl(linkData.getUrl(), "Incorrect url");
     }
 }

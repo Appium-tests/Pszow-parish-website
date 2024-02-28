@@ -1,0 +1,30 @@
+{
+    "correct": [
+        "Duszpasterze",
+        "caritas",
+        "kalwaria",
+        "pogrzeby",
+        "transmisja",
+        "parafia"
+    ],
+    "incorrect": [
+        "Dump Truck",
+        "Dragline",
+        "Crawler",
+        "Trencher",
+        "Scraper",
+        "Bulldozer",
+        "Trencher"
+    ],
+    "naughtyStrings": [
+        "⁦test⁧",
+        "''",
+        "１２３",
+        "1E02",
+        null,
+        "\"\"",
+        "Œ„´‰ˇÁ¨ˆØ∏”’",
+        "᠎",
+        "👩🏽"
+    ]
+}

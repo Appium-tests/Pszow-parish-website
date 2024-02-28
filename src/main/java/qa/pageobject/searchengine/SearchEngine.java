@@ -16,12 +16,17 @@ public class SearchEngine extends BasePage {
     @FindBy(id = "ocean-mobile-search-2")
     WebElement searchField;
 
-    @FindBy(className = "searchform-submit") //button //button/i xpaths
+    @FindBy(className = "searchform-submit")
     WebElement searchButton;
 
     public void setPhrase(String phrase) {
 
         getWebDriverWait().until(ExpectedConditions.visibilityOf(searchField)).sendKeys(phrase);
+    }
+
+    public String getSearchFieldContent() {
+
+        return searchField.getAttribute("value");
     }
 
     public void tapSearchButton() {

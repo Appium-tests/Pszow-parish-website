@@ -1,13 +1,8 @@
-package qa.base;
+package base;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
-import qa.dataproviders.DropdownListDataProviders;
-
-import java.io.FileNotFoundException;
 
 public class DropdownListTest extends BaseTest {
 

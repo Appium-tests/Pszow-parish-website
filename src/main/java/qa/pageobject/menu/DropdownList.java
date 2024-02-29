@@ -32,6 +32,11 @@ public abstract class DropdownList extends BasePage {
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(triggerElement)).click();
     }
 
+    public void touchLink(WebElement element) {
+
+        getWebDriverWait().until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+
     public void touchLink(String value) {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath(value))).click();

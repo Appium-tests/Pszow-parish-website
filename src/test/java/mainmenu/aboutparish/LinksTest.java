@@ -26,6 +26,7 @@ public class LinksTest extends DropdownListTest {
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
         steps = new DropdownListSteps(new AboutParishDropdownList(getDriver()));
+        steps.touchTriggerElement();
     }
 
     @Test(dataProvider = DataProviderNames.ABOUT_PARISH, dataProviderClass = DropdownListDataProviders.class)

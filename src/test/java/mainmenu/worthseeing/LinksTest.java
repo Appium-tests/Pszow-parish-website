@@ -27,6 +27,7 @@ public class LinksTest extends DropdownListTest {
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
         steps = new DropdownListSteps(new WorthSeeingDropdownList(getDriver()));
+        steps.touchTriggerElement();
     }
 
     @Test(dataProvider = DataProviderNames.WORTH_SEEING, dataProviderClass = DropdownListDataProviders.class)

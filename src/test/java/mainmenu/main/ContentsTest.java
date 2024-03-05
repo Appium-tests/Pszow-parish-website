@@ -1,17 +1,17 @@
 package mainmenu.main;
 
+import base.BaseTest;
 import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.MainDropdownList;
 
 @Epic("E2E")
 @Feature("Expanding and collapsing the main menu dropdown list")
-public class ContentsTest extends DropdownListTest {
+public class ContentsTest extends BaseTest {
 
     private MainDropdownList mainDropdownList;
 
@@ -22,7 +22,7 @@ public class ContentsTest extends DropdownListTest {
         mainDropdownList = new MainDropdownList(getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(2)
     @QaseTitle("Expanding the main dropdown list")
@@ -33,7 +33,7 @@ public class ContentsTest extends DropdownListTest {
         checkContentsVisibility(mainDropdownList.getContentsLocator(), "The main dropdown list is not expanded");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(3)
     @QaseTitle("Collapsing the main dropdown list")

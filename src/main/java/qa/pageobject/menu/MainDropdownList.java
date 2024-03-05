@@ -40,36 +40,50 @@ public class MainDropdownList extends DropdownList {
     @FindBy(xpath = "//li[@id='menu-item-24702']/a")
     WebElement officeLink;
 
+    @io.qameta.allure.Step("Touch the \"Ogłoszenia duszpasterskie\" link")
+    @io.qase.api.annotation.Step("Touch the \"Ogłoszenia duszpasterskie\" link")
     public void touchAnnouncementsLink() {
 
         touchLink(announcementsLink);
     }
 
+    @io.qameta.allure.Step("Touch the \"Intencje mszalne\" link")
+    @io.qase.api.annotation.Step("Touch the \"Intencje mszalne\" link")
     public void touchIntentionsLink() {
 
         touchLink(intentionsLink);
     }
 
+    @io.qameta.allure.Step("Touch the \"Pogrzeby\" link")
+    @io.qase.api.annotation.Step("Touch the \"Pogrzeby\" link")
     public void touchFuneralsLink() {
 
         touchLink(funeralsLink);
     }
 
+    @io.qameta.allure.Step("Touch the \"Szafarze\" link")
+    @io.qase.api.annotation.Step("Touch the \"Szafarze\" link")
     public void touchStewardsLink() {
 
         touchLink(stewardsLink);
     }
 
+    @io.qameta.allure.Step("Touch the \"Duszpasterze\" link")
+    @io.qase.api.annotation.Step("Touch the \"Duszpasterze\" link")
     public void touchPriestsLink() {
 
         touchLink(priestsLink);
     }
 
+    @io.qameta.allure.Step("Touch the \"Spowiedź\" link")
+    @io.qase.api.annotation.Step("Touch the \"Spowiedź\" link")
     public void touchConfessionLink() {
 
         touchLink(confessionLink);
     }
 
+    @io.qameta.allure.Step("Touch the \"Kancelaria\" link")
+    @io.qase.api.annotation.Step("Touch the \"Kancelaria\" link")
     public void touchOfficeLink() {
 
         touchLink(officeLink);

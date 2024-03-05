@@ -17,16 +17,13 @@ public abstract class DropdownList extends BasePage {
         this.contents = contents;
     }
 
-    public WebElement getTriggerElementLocator() {
-
-        return getDriver().findElement(triggerElement);
-    }
-
     public WebElement getContentsLocator() {
 
         return getDriver().findElement(contents);
     }
 
+    @io.qameta.allure.Step("Touch the trigger element")
+    @io.qase.api.annotation.Step("Touch the trigger element")
     public void touchTriggerElement() {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(triggerElement)).click();

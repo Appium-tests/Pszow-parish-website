@@ -1,8 +1,6 @@
 package mainmenu.main;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -10,39 +8,40 @@ import org.testng.annotations.Test;
 import base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.MainDropdownList;
-import qa.steps.DropdownListSteps;
 
 @Epic("E2E")
 @Feature("Expanding and collapsing the main menu dropdown list")
 public class ContentsTest extends DropdownListTest {
 
-    private DropdownListSteps steps;
+    private MainDropdownList mainDropdownList;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
-        steps = new DropdownListSteps(new MainDropdownList(getDriver()));
+        mainDropdownList = new MainDropdownList(getDriver());
     }
 
     @Test(priority = 1)
+    @Severity(SeverityLevel.CRITICAL)
     @QaseId(2)
     @QaseTitle("Expanding the main dropdown list")
-    @Description("Expanding the main drop-down list")
+    @Description("Expanding the main dropdown list")
     public void expandingDropdownList() {
 
-        steps.touchTriggerElement();
-        checkContentsVisibility(steps.getDropdownList().getContentsLocator(), "The main dropdown list is not expanded");
+        mainDropdownList.touchTriggerElement();
+        checkContentsVisibility(mainDropdownList.getContentsLocator(), "The main dropdown list is not expanded");
     }
 
     @Test(priority = 2)
+    @Severity(SeverityLevel.CRITICAL)
     @QaseId(3)
     @QaseTitle("Collapsing the main dropdown list")
     @Description("Collapsing the main menu dropdown list")
     public void collapsingDropdownList() {
 
-        steps.touchTriggerElement();
-        steps.touchTriggerElement();
-        checkContentsInvisibility(steps.getDropdownList().getContentsLocator(), "The main dropdown list is not collapsed");
+        mainDropdownList.touchTriggerElement();
+        mainDropdownList.touchTriggerElement();
+        checkContentsInvisibility(mainDropdownList.getContentsLocator(), "The main dropdown list is not collapsed");
     }
 }

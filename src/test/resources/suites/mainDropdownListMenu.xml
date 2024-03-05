@@ -7,21 +7,13 @@
         <listener class-name="qa.listener.TestListener"/>
     </listeners>
 
-    <parameter name="announcementsURL" value="https://bazylika-pszow.pl/ogloszenia-duszpasterskie/"/>
-    <parameter name="intentionsURL" value="https://bazylika-pszow.pl/intencje-mszalne/"/>
-    <parameter name="funeralsURL" value="https://bazylika-pszow.pl/pogrzeby/"/>
-    <parameter name="stewardsURL" value="https://bazylika-pszow.pl/szafarze/"/>
-    <parameter name="priestsURL" value="https://bazylika-pszow.pl/kaplani/"/>
-    <parameter name="confessionURL" value="https://bazylika-pszow.pl/spowiedz-w-bazylice/"/>
-    <parameter name="officeURL" value="https://bazylika-pszow.pl/kancelaria/"/>
-
     <test name="Expanding and collapsing the main dropdown list menu">
         <classes>
             <class name="mainmenu.main.ContentsTest"/>
         </classes>
     </test>
 
-    <test name="Main dropdownlist menu links">
+    <test name="Links">
         <parameter name="filename" value="links"/>
 
         <classes>

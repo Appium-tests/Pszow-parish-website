@@ -1,41 +1,113 @@
 package mainmenu.aboutparish;
 
-import io.qameta.allure.Allure;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.DropdownListTest;
-import qa.dataprovidernames.DataProviderNames;
-import qa.dataproviders.DropdownListDataProviders;
 import qa.enums.URLs;
-import qa.models.LinkData;
 import qa.pageobject.menu.AboutParishDropdownList;
-import qa.steps.DropdownListSteps;
 
 @Epic("E2E")
-@Feature("The \"O parafii\" menu links")
+@Feature("The \"O Parafii\" menu links")
 public class LinksTest extends DropdownListTest {
-    private DropdownListSteps steps;
+    AboutParishDropdownList aboutParishDropdownList;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        steps = new DropdownListSteps(new AboutParishDropdownList(getDriver()));
-        steps.touchTriggerElement();
+        aboutParishDropdownList = new AboutParishDropdownList(getDriver());
+        aboutParishDropdownList.touchTriggerElement();
     }
 
-    @Test(dataProvider = DataProviderNames.ABOUT_PARISH, dataProviderClass = DropdownListDataProviders.class)
-    @QaseId(7)
-    @QaseTitle("The \"O Parafii\" dropdown list links")
-    public void linksTest(LinkData linkData) {
+    @Test(priority = 3)
+    @Severity(SeverityLevel.CRITICAL)
+    @QaseId(13)
+    @QaseTitle("The \"Kontakt\" dropdown list links")
+    @Description("The \"Kontakt\" dropdown list links")
+    public void contact() {
 
-        Allure.description("Touching the " + linkData.getValue() + " link");
-        steps.touchLink(linkData.getValue());
-        waitForUrl(linkData.getUrl(), "Incorrect url");
+        aboutParishDropdownList.touchContactLink();
+        waitForUrl(URLs.CONTACT_PAGE.getName(), "The page \"" + URLs.CONTACT_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 6)
+    @Severity(SeverityLevel.NORMAL)
+    @QaseId(14)
+    @QaseTitle("The \"Historia Parafii\" dropdown list links")
+    @Description("The \"Historia Parafii\" dropdown list links")
+    public void historyLink() {
+
+        aboutParishDropdownList.touchHistoryLink();
+        waitForUrl(URLs.HISTORY_PAGE.getName(), "The page \"" + URLs.HISTORY_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 7)
+    @Severity(SeverityLevel.MINOR)
+    @QaseId(15)
+    @QaseTitle("The \"Kalwaria Pszowska\" dropdown list links")
+    @Description("The \"Kalwaria Pszowska\" dropdown list links")
+    public void calvaryLink() {
+
+        aboutParishDropdownList.touchCalvaryLink();
+        waitForUrl(URLs.CALVARY_PAGE.getName(), "The page \"" + URLs.CALVARY_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 8)
+    @Severity(SeverityLevel.NORMAL)
+    @QaseId(16)
+    @QaseTitle("The \"Pielgrzymki\" dropdown list links")
+    @Description("The \"Pielgrzymki\" dropdown list links")
+    public void pilgrimagesLink() {
+
+        aboutParishDropdownList.touchPilgrimagesLink();
+        waitForUrl(URLs.PILGRIMAGES_PAGE.getName(), "The page \"" + URLs.PILGRIMAGES_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 2)
+    @Severity(SeverityLevel.CRITICAL)
+    @QaseId(17)
+    @QaseTitle("The \"Galeria zdjęć\" dropdown list links")
+    @Description("The \"Galeria zdjęć\" dropdown list links")
+    public void photoGalleryLink() {
+
+        aboutParishDropdownList.touchPhotoGalleryLink();
+        waitForUrl(URLs.PHOTO_GALLERY_PAGE.getName(), "The page \"" + URLs.PHOTO_GALLERY_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 4)
+    @Severity(SeverityLevel.CRITICAL)
+    @QaseId(18)
+    @QaseTitle("The \"Galeria filmów\" dropdown list links")
+    @Description("The \"Galeria filmów\" dropdown list links")
+    public void filmGalleryLink() {
+
+        aboutParishDropdownList.touchFilmGalleryLink();
+        waitForUrl(URLs.FILM_GALLERY_PAGE.getName(), "The page \"" + URLs.FILM_GALLERY_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 1)
+    @Severity(SeverityLevel.CRITICAL)
+    @QaseId(17)
+    @QaseTitle("The \"Transmisja Mszy św.\" dropdown list links")
+    @Description("The \"Transmisja Mszy św.\" dropdown list links")
+    public void youtubeLink() {
+
+        aboutParishDropdownList.touchYoutubeLink();
+        waitForUrl(URLs.YOUTUBE_PAGE.getName(), "The page \"" + URLs.YOUTUBE_PAGE.getName() + "\" has not been opened");
+    }
+
+    @Test(priority = 5)
+    @Severity(SeverityLevel.NORMAL)
+    @QaseId(17)
+    @QaseTitle("The \"Wsparcie Parafii\" dropdown list links")
+    @Description("The \"Wsparcie Parafii\" dropdown list links")
+    public void supportyLink() {
+
+        aboutParishDropdownList.touchSupportLink();
+        waitForUrl(URLs.SUPPORT_PAGE.getName(), "The page \"" + URLs.SUPPORT_PAGE.getName() + "\" has not been opened");
     }
 }

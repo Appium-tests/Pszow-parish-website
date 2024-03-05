@@ -11,19 +11,18 @@ import org.testng.annotations.Test;
 import base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.MainDropdownList;
-import qa.steps.MainDropdownListSteps;
 
 @Epic("E2E")
 @Feature("Main dropdown list links")
 public class LinksTest extends DropdownListTest {
-    private MainDropdownListSteps steps;
+    private MainDropdownList mainDropdownList;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        steps = new MainDropdownListSteps(new MainDropdownList(getDriver()));
+        mainDropdownList = new MainDropdownList(getDriver());
     }
 
     @Test
@@ -33,7 +32,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Ogłoszenia duszpasterskie\" link")
     public void announcementsLink(String announcementsURL) {
 
-        steps.touchAnnouncementsLink();
+        mainDropdownList.touchAnnouncementsLink();
         waitForUrl(announcementsURL, "Incorrect url");
     }
 
@@ -44,7 +43,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Intencje mszalne\" link")
     public void intentionsLink(String intentionsURL) {
 
-        steps.touchIntentionsLink();
+        mainDropdownList.touchIntentionsLink();
         waitForUrl(intentionsURL, "Incorrect url");
     }
 
@@ -55,7 +54,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Pogrzeby\" link")
     public void funeralsLink(String funeralsURL) {
 
-        steps.touchFuneralsLink();
+        mainDropdownList.touchFuneralsLink();
         waitForUrl(funeralsURL, "Incorrect url");
     }
 
@@ -66,7 +65,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Szafarze\" link")
     public void stewardsLink(String stewardsURL) {
 
-        steps.touchStewardsLink();
+        mainDropdownList.touchStewardsLink();
         waitForUrl(stewardsURL, "Incorrect url");
     }
 
@@ -77,7 +76,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Duszpasterze\" link")
     public void priestsLink(String priestsURL) {
 
-        steps.touchPriestsLink();
+        mainDropdownList.touchPriestsLink();
         waitForUrl(priestsURL, "Incorrect url");
     }
 
@@ -88,7 +87,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Spowiedź\" link")
     public void confessionLink(String confessionURL) {
 
-        steps.touchConfessionLink();
+        mainDropdownList.touchConfessionLink();
         waitForUrl(confessionURL, "Incorrect url");
     }
 
@@ -99,7 +98,7 @@ public class LinksTest extends DropdownListTest {
     @Description("The \"Kancelaria\" link")
     public void officeLink(String officeURL) {
 
-        steps.touchOfficeLink();
+        mainDropdownList.touchOfficeLink();
         waitForUrl(officeURL, "Incorrect url");
     }
 }

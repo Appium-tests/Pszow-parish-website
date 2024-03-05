@@ -17,7 +17,7 @@ public class LogoTest extends BaseTest {
     @BeforeMethod
     public void init() {
 
-        goToUrl(URLs.HOME_PAGE.getName());
+        goToUrl(URLs.PHOTO_GALLERY_PAGE.getName());
         header = new Header(getDriver());
     }
 

@@ -1,6 +1,7 @@
 package base;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -74,6 +75,33 @@ public class BaseTest {
 
         try {
             webDriverWait.until(ExpectedConditions.urlContains(url));
+        } catch (Exception e) {
+            Assert.fail(assertionMessage);
+        }
+    }
+
+    protected void checkIfUrlContains(String url) {
+
+        try {
+            getWebDriverWait().until(ExpectedConditions.urlContains(url));
+        } catch (Exception e) {
+            Assert.fail("The url \"" + getDriver().getCurrentUrl() + "\" does not contain \"" + url + "\"");
+        }
+    }
+
+    protected void checkContentsVisibility(WebElement element, String assertionMessage) {
+
+        try {
+            getWebDriverWait().until(ExpectedConditions.visibilityOf(element));
+        } catch (Exception e) {
+            Assert.fail(assertionMessage);
+        }
+    }
+
+    protected void checkContentsInvisibility(WebElement element, String assertionMessage) {
+
+        try {
+            getWebDriverWait().until(ExpectedConditions.invisibilityOf(element));
         } catch (Exception e) {
             Assert.fail(assertionMessage);
         }

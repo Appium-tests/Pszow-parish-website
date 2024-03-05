@@ -1,35 +1,34 @@
 package header;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import qa.enums.URLs;
-import qa.steps.HeaderSteps;
+import qa.pageobject.header.Header;
 
 @Epic("E2E")
 @Feature("Logo")
 public class LogoTest extends BaseTest {
-    private HeaderSteps steps;
+    private Header header;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
-        steps = new HeaderSteps(getDriver());
+        header = new Header(getDriver());
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Touching the logo")
     @QaseId(1)
-    @QaseTitle("Tapping the logo")
-    @Description("Tapping the logo")
+    @QaseTitle("Touching the logo")
     public void tappingLogo() {
 
-        steps.touchLogo();
+        header.touchLogo();
         waitForUrl(URLs.HOME_PAGE.getName(), "Incorrect url");
     }
 }

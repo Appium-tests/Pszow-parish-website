@@ -17,6 +17,8 @@ public class Header extends BasePage {
     @FindBy(className = "custom-logo")
     WebElement logo;
 
+    @io.qameta.allure.Step("Touch the logo")
+    @io.qase.api.annotation.Step("Touch the logo")
     public void touchLogo() {
 
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(logo)).click();

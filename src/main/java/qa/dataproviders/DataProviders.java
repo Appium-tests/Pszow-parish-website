@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 import qa.dataprovidernames.DataProviderNames;
 import qa.modelsbuilder.ModelsBuilder;
 
-public class PhrasesDataProviders {
+public class DataProviders {
 
     @DataProvider(name = DataProviderNames.CORRECT)
     public Object[] correct() {
@@ -22,5 +22,11 @@ public class PhrasesDataProviders {
     public Object[] naughtyStrings() {
 
         return ModelsBuilder.getStrings(DataProviderNames.NAUGHTY_STRINGS);
+    }
+
+    @DataProvider(name = DataProviderNames.ITEMS)
+    public Object[] items() {
+
+        return ModelsBuilder.getItems();
     }
 }

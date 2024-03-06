@@ -20,7 +20,6 @@ public class SocialMediaIconsTest extends BaseTest {
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
         socialMedia = new SocialMedia(getDriver());
-        expandMainDropdownList();
     }
 
     @Test(priority = 1)

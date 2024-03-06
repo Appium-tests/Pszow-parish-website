@@ -26,7 +26,7 @@ public class InputTextVerificationTest extends BaseTest {
     }
 
     @Test
-    @QaseId(20)
+    @QaseId(51)
     @QaseTitle("Input text verification")
     @Description("Checking input of the search field")
     public void byTappingSearchButton() {

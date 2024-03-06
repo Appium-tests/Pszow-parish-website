@@ -1,17 +1,17 @@
 package mainmenu.aboutparish;
 
+import base.BaseTest;
 import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.AboutParishDropdownList;
 
 @Epic("E2E")
 @Feature("Expanding and collapsing the \"O parafii\" dropdown list")
-public class ContentsTest extends DropdownListTest {
+public class ContentsTest extends BaseTest {
     private AboutParishDropdownList aboutParishDropdownList;
 
     @BeforeMethod

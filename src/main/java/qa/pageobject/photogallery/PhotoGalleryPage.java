@@ -7,12 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import qa.base.BasePage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PhotoGalleryPage extends BasePage {
-
-    private List<WebElement> items = new ArrayList<>();
 
     public PhotoGalleryPage(AndroidDriver driver) {
 
@@ -22,19 +17,11 @@ public class PhotoGalleryPage extends BasePage {
     @FindBy(className = "elementor-accordion")
     WebElement elementorAccordion;
 
-    public void findItems() {
+    public void touchTriggerElement(String id) {
 
-        getWebDriverWait().until(ExpectedConditions.visibilityOf(elementorAccordion));
-        items = elementorAccordion.findElements(By.cssSelector("div.elementor-accordion-item"));
-    }
-
-    public int getItemsCount() {
-
-        return items.size();
-    }
-
-    public Item getItem(int index) {
-
-        return new Item(getDriver(), items.get(index));
+        WebElement element = getWebDriverWait().until(ExpectedConditions.elementToBeClickable(getDriver().findElement(By.id(id))));
+        getInteractions().scroll(element);
+        element.click();
+        //getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementorAccordion.findElement(By.id(id)))).click();
     }
 }

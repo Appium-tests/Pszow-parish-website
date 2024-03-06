@@ -1,17 +1,17 @@
 package mainmenu.aboutparish;
 
+import base.BaseTest;
 import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import base.DropdownListTest;
 import qa.enums.URLs;
 import qa.pageobject.menu.AboutParishDropdownList;
 
 @Epic("E2E")
 @Feature("The \"O Parafii\" menu links")
-public class LinksTest extends DropdownListTest {
+public class LinksTest extends BaseTest {
     AboutParishDropdownList aboutParishDropdownList;
 
     @BeforeMethod

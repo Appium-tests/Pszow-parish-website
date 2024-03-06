@@ -5,9 +5,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class Capabilities {
 
     private static final String AUTOMATION_NAME = "uiautomator2";
-    private static final String DEVICE_NAME = "pixel_3a";
+    private static final String DEVICE_NAME = "emulator-5554";
     private static final String PLATFORM_NAME = "Android";
-    private static final String PLATFORM_VERSION = "14";
+    private static final String PLATFORM_VERSION = "11";
     private static final String BROWSER_NAME = "Chrome";
     private static final String ANDROID_PACKAGE = "com.android.chrome";
 

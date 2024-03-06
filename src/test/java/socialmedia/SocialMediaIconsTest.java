@@ -1,50 +1,47 @@
 package socialmedia;
 
-import io.qameta.allure.Allure;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.BaseTest;
-import qa.dataprovidernames.DataProviderNames;
-import qa.dataproviders.SocialMediaDataProviders;
 import qa.enums.URLs;
-import qa.models.LinkData;
-import qa.steps.SocialMediaSteps;
+import qa.pageobject.socialmedia.SocialMedia;
 
-@Epic("E@E")
+@Epic("E2E")
 @Feature("Social media icons")
 public class SocialMediaIconsTest extends BaseTest {
-    private SocialMediaSteps steps;
+    private SocialMedia socialMedia;
 
     @BeforeMethod
     public void init() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
-        steps = new SocialMediaSteps(getDriver());
+        socialMedia = new SocialMedia(getDriver());
+        expandMainDropdownList();
     }
 
-    private void checkIfUrlContains(String url) {
+    @Test(priority = 1)
+    @Severity(SeverityLevel.CRITICAL)
+    @QaseId(48)
+    @QaseTitle("The Facebook icon")
+    @Description("The Facebook icon")
+    public void facebookIcon() {
 
-        try {
-            getWebDriverWait().until(ExpectedConditions.urlContains(url));
-        } catch (Exception e) {
-            Assert.fail("The url \"" + getDriver().getCurrentUrl() + "\" does not contain \"" + url + "\"");
-        }
+        socialMedia.touchFacebookIcon();
+        checkIfUrlContains(URLs.FACEBOOK_PAGE.getName());
     }
 
-    @Test(dataProvider = DataProviderNames.SOCIAL_MEDIA, dataProviderClass = SocialMediaDataProviders.class)
-    @QaseId(17)
-    @QaseTitle("The socialmedia icons")
-    public void links(LinkData data) {
+    @Test(priority = 2)
+    @Severity(SeverityLevel.CRITICAL)
+    @QaseId(49)
+    @QaseTitle("The Facebook icon")
+    @Description("The Facebook icon")
+    public void youtubeIcon() {
 
-        Allure.description("Tapping the \"" + data.getValue() + "\" icon");
-        steps.touchIcon(data.getValue());
-        checkIfUrlContains(data.getUrl());
+        socialMedia.touchYoutubeIcon();
+        checkIfUrlContains(URLs.YOUTUBE_PAGE.getName());
     }
 }

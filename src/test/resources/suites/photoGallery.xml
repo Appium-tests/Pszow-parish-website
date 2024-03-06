@@ -7,23 +7,11 @@
         <listener class-name="qa.listener.TestListener"/>
     </listeners>
 
-    <test name="Expanding the photo gallery contents">
-        <classes>
-            <class name="photogallery.PhotoGalleryPageTest">
-                <methods>
-                    <include name="expandingGallery"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+    <test name="Expanding and collapsing the content of the photo gallery">
+        <parameter name="filename" value="PP_Items"/>
 
-    <test name="collapsing the photo gallery contents">
         <classes>
-            <class name="photogallery.PhotoGalleryPageTest">
-                <methods>
-                    <include name="collapsingGallery"/>
-                </methods>
-            </class>
+            <class name="photogallery.PhotoGalleryPageTest"/>
         </classes>
     </test>
 </suite>

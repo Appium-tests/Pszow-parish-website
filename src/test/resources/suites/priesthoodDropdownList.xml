@@ -14,8 +14,6 @@
     </test>
 
     <test name="'Duszpasterstwo' dropdown list links">
-        <parameter name="filename" value="links"/>
-
         <classes>
             <class name="mainmenu.priesthood.LinksTest"/>
         </classes>

@@ -32,27 +32,27 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
 
-        logger.info("Test start on " + result.getMethod());
+        logger.info("Test start on {}", result.getMethod());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
 
-        logger.info("PASSED on " + result.getMethod());
+        logger.info("PASSED on {}", result.getMethod());
         saveTextLog(result.getMethod().getMethodName() + "- PASSED");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
 
-        logger.info("FAILED on " + result.getThrowable().toString());
+        logger.info("FAILED on {}", result.getThrowable().toString());
         saveTextLog(result.getMethod().getMethodName() + "- FAILED");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
 
-        logger.info("SKIPPED on " + result.getMethod());
+        logger.info("SKIPPED on {}", result.getMethod());
         saveTextLog(result.getMethod().getMethodName() + "- SKIPPED");
     }
 }

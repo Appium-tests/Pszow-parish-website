@@ -2,6 +2,7 @@ package mainmenu.priesthood;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -14,15 +15,30 @@ import qa.pageobject.menu.PriesthoodDropdownList;
 public class ContentsTest extends BaseTest {
     private PriesthoodDropdownList priesthoodDropdownList;
 
-    @BeforeMethod
-    public void init() {
+    @BeforeMethod(onlyForGroups = "withoutExpandedList")
+    public void prepareWithoutExpandedList() {
+
+        initialize();
+    }
+
+    @BeforeMethod(onlyForGroups = "withExpandedList")
+    public void prepareWithExpandedList() {
+
+        initialize();
+        priesthoodDropdownList.touchTriggerElement();
+    }
+
+    private void initialize() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
         priesthoodDropdownList = new PriesthoodDropdownList(getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = "withoutExpandedList")
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(28)
     @QaseTitle("Expanding the \"Duszpasterstwo\" dropdown list")
@@ -33,13 +49,15 @@ public class ContentsTest extends BaseTest {
         checkContentsVisibility(priesthoodDropdownList.getContentsLocator(), "The \"Duszpasterstwo\" dropdown list is not expanded");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = "withExpandedList")
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @QaseId(29)
     @QaseTitle("Collapsing the \"Duszpasterstwo\" dropdown list")
     @Description("Collapsing the \"Duszpasterstwo\" dropdown list")
     public void collapsingDropdownList() {
 
-        priesthoodDropdownList.touchTriggerElement();
         priesthoodDropdownList.touchTriggerElement();
         checkContentsInvisibility(priesthoodDropdownList.getContentsLocator(), "The \"Duszpasterstwo\" dropdown list is not collapsed");
     }

@@ -2,6 +2,7 @@ package mainmenu.aboutparish;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -14,15 +15,30 @@ import qa.pageobject.menu.AboutParishDropdownList;
 public class ContentsTest extends BaseTest {
     private AboutParishDropdownList aboutParishDropdownList;
 
-    @BeforeMethod
-    public void init() {
+    @BeforeMethod(onlyForGroups = "withoutExpandedList")
+    public void prepareWithoutExpandedList() {
+
+        initialize();
+    }
+
+    @BeforeMethod(onlyForGroups = "withExpandedList")
+    public void prepareWithExpandedList() {
+
+        initialize();
+        aboutParishDropdownList.touchTriggerElement();
+    }
+
+    private void initialize() {
 
         goToUrl(URLs.HOME_PAGE.getName());
         expandMainDropdownList();
         aboutParishDropdownList = new AboutParishDropdownList(getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = "withoutExpandedList")
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(11)
     @QaseTitle("Expanding the \"O Parafii\" drop-down list")
@@ -33,14 +49,13 @@ public class ContentsTest extends BaseTest {
         checkContentsVisibility(aboutParishDropdownList.getContentsLocator(), "The \"O Parafii\" dropdown list is not expanded");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = "withExpandedList")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(12)
     @QaseTitle("Collapsing the \"O Parafii\" drop-down list")
     @Description("Collapsing the menu dropdown list")
     public void collapsingDropdownList() {
 
-        aboutParishDropdownList.touchTriggerElement();
         aboutParishDropdownList.touchTriggerElement();
         checkContentsInvisibility(aboutParishDropdownList.getContentsLocator(), "The \"O Parafii\" dropdown list is not collapsed");
     }

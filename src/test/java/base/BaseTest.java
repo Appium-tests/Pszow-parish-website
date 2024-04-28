@@ -10,6 +10,7 @@ import qa.driver.Driver;
 import qa.interactions.Interactions;
 import qa.pageobject.menu.MainDropdownList;
 import qa.servermanager.ServerManager;
+import qa.support.byfinder.AdbUninstallUIautomator;
 import qa.testdataloader.TestDataLoader;
 
 import java.net.MalformedURLException;
@@ -24,6 +25,7 @@ public class BaseTest {
     @BeforeSuite
     public void startServer() {
 
+        AdbUninstallUIautomator.uninstall();
         ServerManager.setup();
         ServerManager.start();
     }
@@ -39,11 +41,9 @@ public class BaseTest {
     public void fetchTestData(@Optional("noFilename") String filename) {
 
         if (!filename.equals("noFilename")){
-
             TestDataLoader.fetch(filename);
         }
     }
-
 
     @BeforeMethod
     public void setup() throws MalformedURLException {

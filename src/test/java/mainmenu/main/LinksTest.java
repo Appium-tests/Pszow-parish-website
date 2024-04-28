@@ -2,6 +2,7 @@ package mainmenu.main;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -23,6 +24,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 1)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(4)
     @QaseTitle("The \"Ogłoszenia duszpasterskie\" link")
@@ -34,6 +38,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 2)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(5)
     @QaseTitle("The \"Intencje mszalne\" link")
@@ -45,6 +52,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 3)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(6)
     @QaseTitle("The \"Pogrzeby\" link")
@@ -56,6 +66,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 7)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(7)
     @QaseTitle("The \"Szafarze\" link")
@@ -67,6 +80,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 6)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(8)
     @QaseTitle("The \"Duszpasterze\" link")
@@ -78,6 +94,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 5)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(9)
     @QaseTitle("The \"Spowiedź\" link")
@@ -89,6 +108,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 4)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(10)
     @QaseTitle("The \"Kancelaria\" link")

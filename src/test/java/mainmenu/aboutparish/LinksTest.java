@@ -2,6 +2,7 @@ package mainmenu.aboutparish;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -24,6 +25,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 3)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(13)
     @QaseTitle("The \"Kontakt\" dropdown list links")
@@ -35,6 +39,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 6)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(14)
     @QaseTitle("The \"Historia Parafii\" dropdown list links")
@@ -46,6 +53,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 7)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(15)
     @QaseTitle("The \"Kalwaria Pszowska\" dropdown list links")
@@ -57,6 +67,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 8)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(16)
     @QaseTitle("The \"Pielgrzymki\" dropdown list links")
@@ -68,6 +81,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 2)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(17)
     @QaseTitle("The \"Galeria zdjęć\" dropdown list links")
@@ -79,6 +95,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 4)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(18)
     @QaseTitle("The \"Galeria filmów\" dropdown list links")
@@ -90,6 +109,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 1)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(17)
     @QaseTitle("The \"Transmisja Mszy św.\" dropdown list links")
@@ -101,6 +123,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 5)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(17)
     @QaseTitle("The \"Wsparcie Parafii\" dropdown list links")

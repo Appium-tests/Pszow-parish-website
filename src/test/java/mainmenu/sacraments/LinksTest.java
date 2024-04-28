@@ -2,6 +2,7 @@ package mainmenu.sacraments;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -25,6 +26,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 1)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(24)
     @QaseTitle("The \"Chrzest\" link")
@@ -36,6 +40,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 2)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(25)
     @QaseTitle("The \"Pierwsza Komunia\" link")
@@ -47,6 +54,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 4)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(26)
     @QaseTitle("The \"Bierzmowanie\" link")
@@ -58,6 +68,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 3)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(24)
     @QaseTitle("The \"Małżeństwo\" link")

@@ -1,8 +1,7 @@
 package photogallery;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.openqa.selenium.By;
@@ -30,10 +29,16 @@ public class PhotoGalleryPageTest extends BaseTest {
 
 
     @Test(dataProvider = DataProviderNames.ITEMS, dataProviderClass = DataProviders.class)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Photo gallery")
     @QaseId(54)
     @QaseTitle("Expanding and collapsing the content of the photo gallery")
     @Description("Expanding and collapsing the content of the photo gallery")
     public void contentVisibility(Item item) {
+
+        Allure.parameter("Tab content", item.getTabContent());
+        Allure.parameter("Tab title", item.getTabTitle());
 
         photoGalleryPage.touchTriggerElement(item.getTabTitle());
         checkContentsVisibility(getDriver().findElement(By.id(item.getTabContent())), "The \"" + item.getTabContent() + "\" is not visible");

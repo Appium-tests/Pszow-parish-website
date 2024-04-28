@@ -1,8 +1,7 @@
 package searchengine;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -41,20 +40,30 @@ public class SearchingArticlesTest extends BaseTest {
     }
 
     @Test(priority = 1, dataProvider = DataProviderNames.CORRECT, dataProviderClass = DataProviders.class)
+    @Owner("Paweł Aksman")
+    @Tag("Search engine")
+    @Tag("Phrase")
     @QaseId(52)
     @QaseTitle("Searching with a correct phrase")
     @Description("Searching with a correct phrase")
     public void correctPhrase(String phrase) {
+
+        Allure.parameter("Phrase", phrase);
 
         actions(phrase);
         Assert.assertTrue(searchResultsPage.getNumberOfArticles() > 0);
     }
 
     @Test(priority = 2, dataProvider = DataProviderNames.INCORRECT, dataProviderClass = DataProviders.class)
+    @Owner("Paweł Aksman")
+    @Tag("Search engine")
+    @Tag("Phrase")
     @QaseId(53)
     @QaseTitle("Searching with an incorrect phrase")
     @Description("Searching with an incorrect phraase")
     public void incorrectPhrase(String phrase) {
+
+        Allure.parameter("Phrase", phrase);
 
         actions(phrase);
         Assert.assertEquals(searchResultsPage.getNumberOfArticles(), 0);

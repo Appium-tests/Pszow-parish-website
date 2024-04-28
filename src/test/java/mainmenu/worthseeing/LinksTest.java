@@ -2,6 +2,7 @@ package mainmenu.worthseeing;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -25,6 +26,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 4)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(43)
     @QaseTitle("The \"Litania do Pani Usmiechniętej\" link")
@@ -36,6 +40,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 1)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(44)
     @QaseTitle("The \"Regulamin cmentarza\" link")
@@ -47,6 +54,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 5)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.MINOR)
     @QaseId(45)
     @QaseTitle("The \"Delegat ds. ochrony dzieci i młodzieży\" link")
@@ -58,6 +68,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 2)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(46)
     @QaseTitle("The \"Archidiecezja Katowicka\" link")
@@ -69,6 +82,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 3)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Dropdown list")
     @Severity(SeverityLevel.CRITICAL)
     @QaseId(47)
     @QaseTitle("The \"Czytania liturgiczne\" link")

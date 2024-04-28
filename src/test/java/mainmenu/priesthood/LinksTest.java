@@ -2,6 +2,7 @@ package mainmenu.priesthood;
 
 import base.BaseTest;
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -24,6 +25,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 11)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.BLOCKER)
     @QaseId(30)
     @QaseTitle("The \"Caritas i działalność charytatywne\" link")
@@ -35,6 +39,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 8)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(31)
     @QaseTitle("The \"Parafialna Rada Duszpasterska\" link")
@@ -46,6 +53,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 7)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(32)
     @QaseTitle("The \"Ministranci i LSO\" link")
@@ -57,6 +67,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 10)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(33)
     @QaseTitle("The \"Dzieci Maryi\" link")
@@ -68,6 +81,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 8)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(34)
     @QaseTitle("The \"Oaza młodzieżowa\" link")
@@ -79,6 +95,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 9)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(35)
     @QaseTitle("The \"Domowy Kościół\" link")
@@ -90,6 +109,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 1)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(36)
     @QaseTitle("The \"Katecheza dorosłych\" link")
@@ -101,6 +123,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 5)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.MINOR)
     @QaseId(37)
     @QaseTitle("The \"PoCo\" link")
@@ -112,6 +137,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 3)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(38)
     @QaseTitle("The \"Legion Maryi\" link")
@@ -123,6 +151,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 2)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(39)
     @QaseTitle("The \"Żywy Różaniec\" link")
@@ -134,6 +165,9 @@ public class LinksTest extends BaseTest {
     }
 
     @Test(priority = 4)
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Links")
     @Severity(SeverityLevel.NORMAL)
     @QaseId(40)
     @QaseTitle("The \"Wspólnota Matki Miłosiernego\" link")

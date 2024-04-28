@@ -1,8 +1,7 @@
 package searchengine;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.Assert;
@@ -26,12 +25,16 @@ public class InputTextVerificationTest extends BaseTest {
     }
 
     @Test
+    @Owner("Paweł Aksman")
+    @Tag("Search engine")
+    @Tag("Phrase")
     @QaseId(51)
     @QaseTitle("Input text verification")
     @Description("Checking input of the search field")
     public void byTappingSearchButton() {
 
         String phrase = "This is the phrase";
+        Allure.parameter("Input", phrase);
         steps.setPhrase(phrase);
         getDriver().hideKeyboard();
 

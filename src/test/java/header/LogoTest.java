@@ -1,6 +1,7 @@
 package header;
 
 import io.qameta.allure.*;
+import io.qameta.allure.testng.Tag;
 import io.qase.api.annotation.QaseId;
 import io.qase.api.annotation.QaseTitle;
 import org.testng.annotations.BeforeMethod;
@@ -22,6 +23,9 @@ public class LogoTest extends BaseTest {
     }
 
     @Test
+    @Owner("Paweł Aksman")
+    @Tag("Views")
+    @Tag("Logo")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Touching the logo")
     @QaseId(1)

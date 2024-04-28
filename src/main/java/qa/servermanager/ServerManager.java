@@ -13,7 +13,7 @@ public class ServerManager {
     private static final String APPIUM_JS = "/home/pawelaksman/node_modules/appium/build/lib/main.js";
     private static final String DRIVER_EXECUTABLE_PATH = "/home/pawelaksman/.nvm/versions/node/v20.11.0/bin/node";
     private static final int PORT = 4724;
-    private static final int DURATION = 100;
+    private static final int DURATION = 200;
 
     public static void setup() {
 

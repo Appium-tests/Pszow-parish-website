@@ -15,6 +15,7 @@ The main objective of this project is to ensure the functionality and performanc
 - **Appium Inspector:** Tool for inspecting elements of mobile applications, used for identifying locators for test automation.
 - **Allure:** Reporting tool used to generate clear and comprehensive test reports.
 - **Qase:** Test management tool integrated with the project for better tracking of test progress and results.
+- **Mockaroo:** Used for generating test data to be used in automated tests.
 
 ### Testing Environment
 The tests are conducted on Android emulators available in Android Studio, ensuring compatibility and consistency across different devices.
